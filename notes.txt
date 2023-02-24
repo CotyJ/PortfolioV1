@@ -1,0 +1,49 @@
+This is following several videos from Front-End Masters
+
+
+Internet Fundamentals
+https://internetfundamentals.com/watch/
+
+Introduction To HTML
+https://frontendmasters.com/bootcamp/introduction-html/introduction/
+
+Getting Started with CSS
+https://frontendmasters.com/courses/getting-started-css/getting-set-up/
+
+
+
+http and https are transfer protocols. S is encrypted from user to destination
+
+
+Transferring files to a web host is done with File Transfer Protocol (FTP)
+
+I haven't worried about this yet. I just uploaded the files manually to AWS?
+
+
+
+Domain
+
+can get from nameboy, namecheap, etc.
+
+.com
+.something
+
+Get your own! Get em all!
+
+.coty
+fal.coty
+cotyjaneway.com
+etc.
+
+connect name to hosting?
+
+
+
+Browser Technologies
+
+HTML
+CSS
+JavaScript
+
+Only these three! Everything else is a variation
+
