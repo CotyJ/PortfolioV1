@@ -1,0 +1,109 @@
+:root {
+  /* Dizzy */
+  --lightBlue: #d0fcfb;
+  --mediumBlue: #477fa1;
+  --darkBlue: #1a2f41;
+  --ribbonYellow: #f8f3a3;
+  --necroGray: #535d58;
+
+  /* Falco */
+  --beakOrange: #eab458;
+  --eyesRed: #9f1a20;
+  --featherblue: #3a468c;
+  --pantsBrown: #843518;
+  --jacketTan: #efefa5;
+
+  --font-size: 1.3rem;
+
+  --mono: "Oxygen mono", monospace;
+  --sans: Oxygen, sans-serif;
+
+  /* ????????? */
+  --teko: "Teko";
+  --ubuntu: "Ubuntu";
+}
+
+
+/* Border box model  */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--ubuntu);
+  background-color: var(--darkBlue);
+  color: white;
+  font-size: var(--font-size);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--lightBlue);
+  color: rgb(227, 0, 205);
+}
+
+a:hover {
+  color: magenta;
+  text-decoration: none;
+}
+
+/* Intro Stylese */
+
+#introduction {
+  padding-bottom: 10rem;
+}
+
+#introduction p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#introduction .name {
+  font-family: var(--teko);
+  font-size: xx-large;
+}
+
+.name span {
+  font-family: var(--ubuntu);
+  font-size: 4rem;
+  color: var(--lightBlue);
+  display: block;
+}
+
+#introduction h2 {
+  font-size: 4rem;
+  font-weight: normal;
+}
+
+#contact {
+  width: 400px;
+  text-align: center;
+  background: var(--necroGray);
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+#contact p:last-child {
+  margin-top: 3rem;
+}
+
+
+/* Navigation Bar */
+
+nav {
+  text-decoration: none;
+}
