@@ -47,3 +47,70 @@ JavaScript
 
 Only these three! Everything else is a variation
 
+
+:root  is called a pseudoclass?
+it indicates this is the top of the Document
+
+
+why not use html?
+
+html has a start and an end, and root encompasses everything.
+also, pseudoclasses are weighted more heavily for css over html. so now we have more control.
+?
+
+
+::before  and after are psudoelements ( because :: )
+
+pseudoclass has to do with functionality. :link, :visited, etc.
+
+pseudoelement has to do with text, such as the first letter in a paragraph
+
+
+
+to style, for example, all p tags inside of an id of #introduction, you would use
+
+#introduction p {
+
+}
+
+
+line-height should not have a unit, so that the browser will adust it as needed
+
+
+
+
+margin: 0 auto;   is a way of centering elements on the page (along with width)
+
+#contact {
+  width: 400px;
+  text-align: center;
+  background: var(--necroGray);
+  margin: 0 auto;
+}
+
+The above centered both the text in the element and the element itself.
+
+
+
+This was used to make the last paragraph in the contact id have this margin. it was for a link nested inside of a paragraph.
+#contact p:last-child{
+margin-top: 3rem;
+}
+
+
+
+
+
+
+/* Media Queries */
+@media(min-width: 850px) {
+  nav {
+    max-width: 1200px;
+  }
+
+}
+
+Media queries seem to be more about the window size, rather than something like an http request to a site
+
+above: when 'media' is at at least 850 px wide,
+  these apply

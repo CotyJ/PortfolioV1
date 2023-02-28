@@ -13,15 +13,15 @@
   --pantsBrown: #843518;
   --jacketTan: #efefa5;
 
+  --AZgray: rgb(69, 69, 69);
+
   --font-size: 1.3rem;
 
-  --mono: "Oxygen mono", monospace;
-  --sans: Oxygen, sans-serif;
-
-  /* ????????? */
-  --teko: "Teko";
+  /* Fonts */
+  --sourceCode: "Source Code Pro";
   --ubuntu: "Ubuntu";
 }
+
 
 
 /* Border box model  */
@@ -40,6 +40,7 @@ body {
   margin: 0;
   font-family: var(--ubuntu);
   background-color: var(--darkBlue);
+  /* background-color: var(--mediumBlue); */
   color: white;
   font-size: var(--font-size);
 }
@@ -48,12 +49,10 @@ h1,
 h2,
 h3 {
   margin: 0;
-  padding: 0;
 }
 
 a {
-  color: var(--lightBlue);
-  color: rgb(227, 0, 205);
+  color: white;
 }
 
 a:hover {
@@ -61,10 +60,14 @@ a:hover {
   text-decoration: none;
 }
 
+
+
 /* Intro Stylese */
 
 #introduction {
-  padding-bottom: 10rem;
+  padding: 4rem 1rem 10rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto; /* centers introduction on screen? */
 }
 
 #introduction p {
@@ -73,8 +76,8 @@ a:hover {
 }
 
 #introduction .name {
-  font-family: var(--teko);
-  font-size: xx-large;
+  font-family: var(--sourceCode);
+  font-size: 2rem;
 }
 
 .name span {
@@ -92,7 +95,6 @@ a:hover {
 #contact {
   width: 400px;
   text-align: center;
-  background: var(--necroGray);
   margin: 0 auto;
   padding: 3rem 0;
 }
@@ -101,9 +103,176 @@ a:hover {
   margin-top: 3rem;
 }
 
+/* Sections & Gradient*/
+
+.section-gray {
+  background-color: var(--AZgray)
+}
+
+.section-blue {
+  background-color: var(--mediumBlue);
+}
+
+.gradient {
+  background: linear-gradient(90deg, rgba(26, 47, 65, 1) 0%, rgba(71, 127, 161, 1) 35%, rgba(208, 252, 251, 1) 100%);
+  /* background: linear-gradient(90deg, rgba(71, 127, 161, 1) 35%, rgba(208, 252, 251, 1) 100%); */
+  /* background: linear-gradient(90deg, rgba(44, 131, 184, 1) 35%, rgba(208, 252, 251, 1) 100%); */
+  height: 2px;
+}
+
+
+
 
 /* Navigation Bar */
 
 nav {
+  list-style-type: none;
+  font-family: var(--sourceCode);
+  font-size: 80%;
+  padding: 1rem;
+}
+
+nav h1 a {
+  font-family: var(--ubuntu);
+}
+nav h1 a:hover {
+  color: var(--lightBlue);
+}
+
+nav h1 span {
+  color: white;
+}
+
+nav ul {
+  display: flex;  /* Puts everything on one line */
+
+  /* Big Three. Almost always use these for nav bar */
+  list-style-type: none;  /* Removes bullets */
+  /* nav's by default come with padding or margin, depending on browser */
+  padding: 0;
+  margin: 0;
+
+  /* Others */
+  flex-flow: row wrap;  /* Allows elements to wrap */
+  justify-content: center;  /* Center HORIZONTALLY */
+  align-items: center;  /* Center VERTICALLY */
+  gap: 2rem;  /* New useful property to specify gap between items */
+  font-size: 140%;  /* added by me*/
+}
+
+nav li:first-child {
+  flex: 0 0 100%;
+  text-align: center;
+}
+
+nav [class*="fa-"] {
+  font-size: 150%;
+  color: var(--lightBlue);
+}
+
+nav h1 [class*="fa-"] {
+  font-size: 100%;
+  /* color: var(--lightBlue); */
+  /* color:white; */
+}
+
+nav [class*="fa-"]:hover {
+  color: magenta;
+}
+
+nav a {
+  color: var(--lightBlue);
   text-decoration: none;
+
+  display: block;
+  /* Displays an element as a block element (like <p>).
+   It starts on a new line, and takes up the whole width */
+}
+
+
+
+/* Button*/
+
+.button {
+  background-color: var(--mediumBlue);
+  padding: 0.1rem 0.5rem;
+  border-radius: 5px;
+  color: var(--lightBlue);
+  border: 2px solid var(--lightBlue);
+  text-decoration: none;
+  font-family: var(--sourceCode);
+}
+
+.button:hover {
+  background-color: var(--AZgray);
+  color: var(--lightBlue);
+}
+
+
+/* Projects */
+#projects {
+  padding: 4rem 1rem;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: calc(2.5rem * 1.5);
+}
+
+#projects h3 {
+  color: var(--lightBlue);
+}
+
+#projects h4 {
+  font-size: 1rem;
+  font-family: var(--sourceCode);
+  margin: 0;
+}
+
+#projects ul {
+  list-style-type: none;
+  font-size: 1.5rem;
+  font-family: var(--sourceCode);
+}
+
+
+
+/* Footer */
+footer {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  margin: 2rem 0;
+
+  /* Others */
+  flex-flow: row wrap;  /* Allows elements to wrap */
+  justify-content: center;  /* Center HORIZONTALLY */
+  gap: 3rem;
+  font-size: 3rem;
+}
+
+footer a {
+    color: var(--lightBlue);
+}
+
+
+
+/* Media Queries */
+@media (min-width: 850px) {
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  nav li:first-child {
+    flex-basis: auto;
+    text-align: left;
+    margin-right: auto;
+    /* combined with text align, margin-right pushes the right text to the right. */
+  }
 }
