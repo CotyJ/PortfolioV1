@@ -15,7 +15,7 @@
 
   --AZgray: rgb(69, 69, 69);
 
-  --font-size: 1.3rem;
+  --font-size: 1.5rem;
 
   /* Fonts */
   --sourceCode: "Source Code Pro";
@@ -39,7 +39,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: var(--ubuntu);
-  background-color: var(--darkBlue);
+  background-color: var(--darkBlue) !important;
   /* background-color: var(--mediumBlue); */
   color: white;
   font-size: var(--font-size);
@@ -231,14 +231,36 @@ nav a {
 
 #projects ul {
   list-style-type: none;
-  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
   font-family: var(--sourceCode);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 1rem;
 }
 
+#projects img {
+  margin: 2rem 0 4rem 0;
+  padding: 1rem;
+  border-left: 1px solid var(--lightBlue);
+  border-top: 1px solid var(--lightBlue);
+  border-radius: 25px;
+}
+
+.black-box {
+background-color: #262241;
+padding: 1rem;
+border-radius: 10px;
+font-size: 1rem;
+line-height: 1.5;
+}
 
 
 /* Footer */
 footer {
+  color: inherit !important;
   padding: 4rem 0;
   text-align: center;
 }
@@ -260,7 +282,9 @@ footer a {
     color: var(--lightBlue);
 }
 
-
+img {
+  width: 100%;
+}
 
 /* Media Queries */
 @media (min-width: 850px) {
@@ -275,4 +299,45 @@ footer a {
     margin-right: auto;
     /* combined with text align, margin-right pushes the right text to the right. */
   }
+
+  article {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 1rem;
+  }
+
+  #projects img {
+    grid-column:  1/6;
+    grid-row: 1/2;
+  }
+
+  .text{
+    padding: 12px;
+    order: 2;
+    text-align: right;
+    grid-column: 5/11;
+    grid-row: 1/2;
+  }
+
+  #projects ul {
+    justify-content: flex-end;
+  }
+
+  #projects .reverse .text {
+    grid-column: 1/7;
+    order: 2;
+    text-align: left;
+  }
+
+  #projects .reverse img {
+  border-left: none;
+  border-right: 1px solid var(--lightBlue);
+    grid-column: 6/11;
+    grid-row: 1/2;
+  }
+
+  #projects .reverse ul {
+    justify-content: flex-start;
+  }
+
 }
