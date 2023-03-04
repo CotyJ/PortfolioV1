@@ -250,7 +250,7 @@ nav a {
 }
 
 .black-box {
-background-color: #262241;
+background-color: var(--darkBlue);
 padding: 1rem;
 border-radius: 10px;
 font-size: 1rem;
